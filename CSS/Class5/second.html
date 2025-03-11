@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* .first > li{
+            color: orange;
+            font-size: x-large;
+        } */
+
+        /* .sec, .sec ~ li{
+            color: orange;
+        } */
+
+        li:nth-child(4){
+            color: orange;
+        }
+
+        .header{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+
+        .header:hover{
+            background-color: orange;
+            transform: rotate(45deg);
+            transition: 2s;
+            border-radius: 50%;
+            margin-left: 100px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1020px) {
+            .header{
+                background-color: green;
+                width: 400px;
+                height: 400px;
+            }
+        }
+
+        @media (min-width: 320px) and (max-width: 767px) {
+             .header{
+                background-color: rgb(233, 195, 24);
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <ul class="first">
+      <li>Books</li>
+      <li class="sec">Notes</li>
+      <li>Pens</li>
+      <li>Penciles</li>
+      <li>Cars</li>
+    </ul>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laborum
+      rerum dignissimos quod perferendis maxime vel necessitatibus cupiditate
+      odit sapiente esse alias, incidunt voluptas. Blanditiis sed molestiae et
+      rerum nisi!
+    </p>
+
+    <div class="header"></div>
+
+    <!-- <ul>
+      <li>Books</li>
+      <li>Notes</li>
+      <li>Pens</li>
+      <li>Penciles</li>
+      <li>Cars</li>
+    </ul> -->
+  </body>
+</html>
