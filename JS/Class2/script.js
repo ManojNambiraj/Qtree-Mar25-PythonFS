@@ -46,13 +46,13 @@
 
     // Global scope
 
-        {
-            var a = 10
+        // {
+        //     var a = 10
 
-            console.log("inside: ", a);
-        }
+        //     console.log("inside: ", a);
+        // }
 
-        console.log("outside: ", a);
+        // console.log("outside: ", a);
 
     // Local scope
 
@@ -64,3 +64,4 @@
 
         // console.log("outside: ", a);
         
+    
