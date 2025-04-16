@@ -40,11 +40,17 @@ class grantParent:
     def carColor(self):
         print("Car color is Crimson")
 
+    def hairColor(self):
+        print("Hair color is childGrey")
+
+
 class parent(grantParent):
     assets = 2000000
 
+    car = "Audi"
+
     def hairColor(self):
-        print("Hair color is gray")
+        print("Hair color is Merron")
 
 class child(parent, grantParent):
     marks = 100
@@ -59,3 +65,5 @@ print(c1.assets)
 c1.hairColor()
 
 c1.carColor()
+
+print(c1.car)
