@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-77#1md*-t90%@s_f6$6ldyw5h(sp$7y5o%*ej5p4l)x=foy=!^'
+SECRET_KEY = 'django-insecure-c!%k2a$9ykhf-zpe(h7r%ci&yyj28zx3wg4rvmvms%j&e(xe*u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -75,12 +75,8 @@ WSGI_APPLICATION = 'dpro.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'demo',
-        'USER': 'root',
-        'PASSWORD': 'M@noj12345',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -121,24 +117,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_DIRS = [
-    "home/static"
+    'home/static'
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "handlers": {
-        "console": {
-            "class": "logging.StreamHandler",
-        },
-    },
-    "root": {
-        "handlers": ["console"],
-        "level": "DEBUG",   
-    },
-}
