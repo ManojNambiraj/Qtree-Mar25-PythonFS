@@ -8,8 +8,8 @@
             <div class="col-lg-8">
               <h1 class="mb-2">{{post.title}}</h1>
               <h2 class="mb-3">{{post.area}}</h2>
-              <p class="text-muted">Posted on January 1, 2024</p>
-              <img src="https://placehold.jp/800x400.png" class="img-fluid mb-4" alt="Blog Image">
+              <p class="text-muted">Posted on {{post.createdAt | date:"M d, Y"}}</p>
+              <img src={{post.img_url}} class="img-fluid mb-4" alt="Blog Image">
               <p>{{post.content}}</p><span>{{post.size}}</span>
             </div>
             <div class="col-lg-4">

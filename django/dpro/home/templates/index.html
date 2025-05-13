@@ -5,7 +5,7 @@
 <div class="container-fluid">
   <div class="row my-2">
     <div class="col">
-      <h2>{{title}}</h2>
+      <h2 class="main_heading">{{title}}</h2>
     </div>
     <div class="col-3">
       <div class="input-group">
@@ -37,7 +37,7 @@
               <div class="row">
                 <div class="col-md-4">
                   <img
-                    src="https://placehold.jp/300x300.png"
+                    src={{post.img_url}}
                     class="img-fluid"
                     alt="..."
                   />
@@ -45,11 +45,11 @@
                 <div class="col-md-8">
                   <h5 class="card-title">{{post.title}}</h5>
                   <p class="card-text">
-                  {{post.content}}
+                  {{post.content | truncatechars:25}}
                   </p>
 
                   <div class="d-flex justify-content-between">
-                    <a href="{% url 'detail' id=post.id %}">Read More</a>
+                    <a href="{% url 'detail' slug=post.slug %}">Read More</a>
                     <a class="text-decoration-none text-dark fw-bold" href="#"
                       >{{post.area}}</a
                     >
